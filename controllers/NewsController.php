@@ -16,9 +16,8 @@ class NewsController {
         $newsList = array();
         $newsList = News::getNewsList(); // Класс::Метод
         
-        echo '<pre>';
-        print_r($newsList);
-        echo '</pre>';
+        // Подключим web-морду
+        require_once (ROOT.'/views/news/index.php');
         
         return true; // Чтобы router.php понял, что такой метод есть
     }

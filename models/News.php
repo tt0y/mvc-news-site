@@ -18,7 +18,7 @@ class News {
             // Коннектимся к базе через метод
             $db = Db::getConnection();
 
-            $result = $db->query(' SELECT id, title, date, short_content '.
+            $result = $db->query(' SELECT id, title, date, short_content, content, author_name '.
                                  ' FROM news '.
                                  ' WHERE id = '.$id
                                  );
@@ -42,7 +42,7 @@ class News {
         // Для списка новостей
         $newsList = array();
         
-        $result = $db->query(' SELECT id, title, date, short_content '.
+        $result = $db->query(' SELECT id, title, date, short_content, content, author_name '.
                              ' FROM news '.
                              ' ORDER BY date DESC '.
                              ' LIMIT 10');

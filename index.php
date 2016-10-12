@@ -1,5 +1,7 @@
 <?php
 
+// Front Controller
+
 // 1. Общие настройки
 ini_set('display_errors', 1); // На время разработки
 error_reporting(E_ALL);
@@ -10,9 +12,9 @@ require_once (ROOT.'/components/Router.php'); // Подключаем класс
 require_once (ROOT.'/components/Db.php'); // Подключаем класс
 
 
-// 3. Соединение с БД
+// 3. Соединение с БД в db::GetConnection
 
 
 // 4. Вызов Router
 $router = new Router(); // Создаем экземпляр класса
-$router->run();         // чекаем, что все работает 
+$router->run();         // Поехали
